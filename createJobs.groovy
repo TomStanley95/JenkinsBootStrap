@@ -16,6 +16,7 @@ pipelineJob('theme-park-job') {
                         url 'https://github.com/TomStanley95/ThemePark.git'
                     }
                     branch 'master'
+                    scriptPath('Jenkinsfile')
                 }
             }
         }

@@ -53,3 +53,18 @@ pipelineJob('theme-park-job-aws') {
         }
     }
 }
+pipelineJob('theme-park-job-aws-teardown') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/TomStanley95/ThemePark.git'
+                    }
+                    branch 'master'
+                    scriptPath('Jenkinsfile-aws-teardown')
+                }
+            }
+        }
+    }
+}
